@@ -34,4 +34,32 @@ public class ClassroomTest {
 		assertEquals(c.getStudents(), temp);
 		
 	}
+	
+	@Test
+	public void testGetAndSetAddStudent() {
+		ArrayList<Student> temp = new ArrayList<Student>();
+		Student s = new Student("Senna","Kjellén", 12, 'F' );
+		temp.add(s);
+		
+		c.addANewStudent(s);
+		System.out.println(c.getStudents());
+		System.out.println(temp);
+		assertEquals(c.getStudents(), temp);
+		
+	}
+	
+	@Test
+	public void testPrintFullRElatory() {
+		Student s = new Student("Senna","Kjellén", 12, 'F' );
+		c.addANewStudent(s);
+		c.printFullRelatory();
+	}
+	
+	@Test
+	public void testremoveAStudent() {
+		Student s = new Student("Senna","Kjellén", 12, 'F' );
+		c.addANewStudent(s);
+		c.removeAStudent("non-existing student");
+		c.removeAStudent("Senna");
+	}
 }
