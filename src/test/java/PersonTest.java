@@ -28,6 +28,6 @@ public class PersonTest {
 	@Test
 	public void testSetAndGetGender() {
 		p.setGender('M');
-		assertEquals(p.getGender().equals('M'),true);
+		assertEquals(p.getGender()==('M'),true);
 	}
 }
